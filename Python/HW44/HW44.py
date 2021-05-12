@@ -14,11 +14,14 @@ for i in range(1,11):
 
 
 y = randint(1,11)
-x = int(input('Guess a number'))    
-
-message = 'you got the number right' if x == y
-print(message)
-
-print(y)    
-
-        
+x= 0
+while True:
+  x = int(input('Guess a number'))    
+  if x < y:
+    print("your guess is to low")
+  elif x > y:
+      print("your guess is too high")
+  else:
+        print("You got it!") 
+        break
+           
