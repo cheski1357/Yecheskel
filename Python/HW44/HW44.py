@@ -2,7 +2,7 @@ from random import randint
 
 y = 'yecheskel finkelstein'
 x= '41 Iroquois Place Lkwd nj'
-kids= ['aviva', 'esther', 'ahuva', 'menachem mendel']
+kids= ['Aviva', 'Esther', 'Ahuva', 'Menachem Mendel']
 print(f' Name:{y} \nAddress: {x} \nchildren:{kids}' )
 print(kids)
 print(y[4::3])
