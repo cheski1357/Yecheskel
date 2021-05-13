@@ -3,7 +3,7 @@ from random import randint
 y = 'yecheskel finkelstein'
 x= '41 Iroquois Place Lkwd nj'
 kids= ['aviva', 'esther', 'ahuva', 'menachem mendel']
-print(f' Name:{y} Address: {x}')
+print(f' Name:{y} \nAddress: {x} \nchildren:{kids}' )
 print(kids)
 print(y[4::3])
 print(kids[-2][1:-1])
@@ -22,6 +22,6 @@ while True:
   elif x > y:
       print("your guess is too high")
   else:
-        print("You got it!") 
-        break
+     print("You got it!") 
+     break
            
