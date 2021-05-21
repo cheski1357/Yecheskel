@@ -1,7 +1,7 @@
 def print_days_of_month():
     months = ['January','February','March','April','May','June','July','August','September','October','November','December']
     days = [31,28,31,30,31,30,31,31,30,31,30,31]
-
+    
     for Monat, Tagen in zip(months, days):
         print(Monat, 'has ', Tagen  ,' days')
         
