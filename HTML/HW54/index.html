@@ -8,7 +8,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="Images/images.jfif">
+ 
+  
 </head>
 <title>The Sheep's Head
 </title>
@@ -18,46 +19,41 @@
     background-color: white;
   }
 
-  h7 {
+  /* h7 {
     position: fixed;
-  }
+  } */
+  body {
+    font-size: 34;
+    background-color: maroon;
+    text-align: center;
+    padding: 256px;
+}
 
-
-
-
-
+  
   .reservations {
 
     border: 1px solid black;
-    left: 110px;
     width: 8em;
     height: 6em;
     background-color: teal;
     color: red;
     font-weight: bold;
     font-size: 1.5em;
-    text-align: center;
     padding-top: 1em;
-    box-sizing: border-box;
-    position: absolute;
-    top: 30%;
-    left: -262px;
-    right: -1090px;
-    bottom: 300px;
     top: 0;
     margin: auto;
+    position: relative;
+    /* top: 30%;
+    left: -262px;
+    right: -1090px;
+    bottom: 300px; */
+    
   }
 
 
 
 
-  body {
-    font-size: 34;
-    background-color: maroon;
-    text-align: center;
-    padding: 256px;
-
-  }
+ 
 
 
 
@@ -79,7 +75,8 @@
   h1 {
     text-align: center;
     background-color: white;
-    padding: 0em;
+    margin-left: 23px;
+    margin-right: 23px;
   }
 
   h2 {
@@ -87,6 +84,7 @@
     border-style: double;
     border-radius: 2cm;
     color: beige;
+    
   }
 
 
@@ -169,9 +167,10 @@
        font-size: 23px;
        background-color: beige;
        padding: 20px;
+       display: block;
 
      }
-
+   
 
   
   video {
@@ -185,6 +184,116 @@
       width: 100%;
     }
   }
+  .parent{
+        background-color: white;
+        border: 1px solid black;
+        height:56px;
+        width: 100px;
+        position: relative;
+        margin:auto;
+       
+        
+
+   }
+    .child{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+        
+        left: 0;
+        top: 7%;
+        width: 100%;
+        height: 13%;
+       
+        
+    }
+    
+    .child3{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+        right: 0;
+      bottom: 7%;
+     width: 100%;
+        height: 13%;
+        }
+        .middlechild1{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+        right: 40%;
+      bottom: 40%;
+     width: 20%;
+        height: 1%;
+        }
+
+
+
+        .middlechild2{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+        right: 40%;
+        top:40%;
+      bottom: 7%;
+     width: 20%;
+        height: 1%;
+        }
+        
+        .childRotate1{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+     right: 35%;
+    top: 44%;
+    bottom: 7%;
+    width: 20%;
+    height: 1%;
+    transform: rotate(60deg);
+  
+
+        }
+        
+        .childRotate2{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+     right: 45%;
+    top: 44%;
+    bottom: 7%;
+    width: 20%;
+    height: 1%;
+    transform: rotate(120deg);
+        }
+        
+        .childRotate3{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+     right: 45%;
+    top: 55%;
+    bottom: 7%;
+    width: 20%;
+    height: 1%;
+    transform: rotate(60deg);
+        }
+        
+        .childRotate4{  
+        
+        background: rgb(83, 150, 226);
+     position: absolute;
+     right: 35%;
+    top: 55%;
+    bottom: 7%;
+    width: 20%;
+    height: 1%;
+    transform: rotate(120deg);
+        }
+        .message{
+           position: absolute;
+           margin-top: 3em;
+          
+        }
 </style>
 </head>
 
@@ -195,14 +304,14 @@
   <h6><br> <audio src="musicIntro.mp3" audio controls></audio>
   </h6>
 
-  <h7>
+ 
     <div class="reservations">
-      <img src="images/click-here-button-1487274_640.png" style="position: absolute;
+      <img src="images/click-here-button-1487274_640.png" 
       top: 0;
       left: 67px;">
       <p>Reserve here!</p>
     </div>
-  </h7>
+  
  
   
 
@@ -328,8 +437,18 @@
         href="https://www.independent.co.uk/life-style/food-and-drink/lamb-most-ethical-meat-eat-buy-farming-why-organic-chicken-beef-pork-daylesford-a7979251.html"
         target="_blank"> Click here for information on <br> why lamb is most ethical meat to comsume</a></nav>
   </h2>
-
-
+  <div class="parent"> 
+    <div class="child"></div>
+   <div class="child3"></div>
+    <div class="middlechild1"></div>
+    <div class="middlechild2"></div>
+    <div class="childRotate1"></div>
+    <div class="childRotate2"></div>
+    <div class="childRotate3"></div>
+    <div class="childRotate4"></div>
+    <br>
+    <p class="message"> We stand by Israel </p></div>
+<br><br><br>
   <div id="copyright">
     &copy; Copyright 2019 The Sheep's head NYC
   </div>
