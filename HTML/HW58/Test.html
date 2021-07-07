@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTUFF A Pcs company</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, Sans-Serif;
+        }
+
+        nav {
+            padding-left: 7px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: .19em .19em;
+            padding-left: 1em;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        footer{
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 1em;
+            margin:-17px;
+            padding-left: 4em;
+            
+           
+
+        }
+
+        header {
+
+            font-size: 34px;
+            text-transform: uppercase;
+
+        }
+
+        h3 {
+            width: 92%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+
+            margin: auto;
+            text-align: center;
+            border-radius: 10px;
+           
+        }
+
+        a:link {
+            text-decoration: none;
+
+        }
+
+        a {
+            color: white;
+            margin: 3px;
+        }
+
+        a:hover {
+            color: red;
+            border-bottom: 3px solid
+        }
+
+        h2 {
+            width: 92%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            background-color: rgba(128, 128, 128, 0.678);
+            margin: auto;
+            margin-top: 11px;
+            text-align: center;
+            border-radius: 3px;
+
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: normal;
+            margin-left: 48px;
+        }
+
+
+        p {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        button {
+            margin: margin-auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+
+            margin: auto;
+        }
+
+        table {
+            font-size: 16px;
+            font-weight: normal;
+            width: 90%;
+            border-collapse: collapse;
+            border-width: 4px;
+            
+
+        }
+
+
+        tr th {
+            font-weight: bold;
+        }
+
+        tr {
+            border: 4px solid black;
+        }
+
+        th {
+            border: 4px solid black;
+        }
+
+        td {
+            border: 4px solid black;
+        }
+
+        tr:nth-child(2n-1) {
+            background-color: rgba(0, 0, 255, 0.342);
+        }
+
+        tbody tr:hover {
+            background-color: grey;
+        }
+
+        th {
+            border-bottom: 4px black;
+            background-color: white;
+        }
+
+        tfoot td {
+            background-color: white;
+        }
+
+        tfoot tr td {
+            border: none;
+        }
+
+        tr td:last-child {
+            border: none;
+            color: red;
+        }
+
+        .container {
+            display: flex;
+            flex-shrink: column;
+        }
+
+        .boxes {
+
+            padding: 50px;
+            
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #products_section {
+            font: size 23px;
+            font-weight: bold;
+
+        }
+
+        #aboutus_section {
+            font: size 23px;
+            font-weight: bold;
+        }
+
+        #financials_section {
+            font: size 23px;
+            font-weight: bold;
+        }
+
+        /* #copyright{
+            width: 100%;
+        
+            
+            height: 2em;
+            padding: .5em .5em;
+           
+        } */
+        #name, #email{
+            font-size: 12px;
+            font-weight:small;
+        }
+
+
+        @media screen and (max-width:1000px) {
+            .container {
+                flex-direction: column;
+
+
+            }
+
+            span {
+                display: none;
+            }
+
+
+            .boxes {
+                width: 800px;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul> <a href="#products_section">Products</a> <a href="#signup_section">Sign Up</a> <a
+                href="#financials_section">Financials</a>
+            <a href="#aboutus_section">About Us</a>
+        </ul>
+    </nav>
+    <br><br>
+    <h2 id="position">
+        <header>Estuff<br> </header> A <i>Pcs</i> company
+    </h2>
+    <h4>
+        <section id="products_section">Products </section><br> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Natus reiciendis beatae in neque?
+    </h4>
+
+
+    <div class="container">
+        <div class="boxes one"> <span> Computers </span><img src="Images/macworld.jpg" width="300px" height="200px"
+                alt=""> </div>
+        <hr>
+        <div class="boxes two"> <span> Chiors</span><video poster="Images/shira.png" src="Images/El Hanaar Hazeh.mp4"
+                width="300px" height="200px" controls></video>
+        </div>
+        <hr>
+        <div class="boxes three"> <span>Candy</span> <img src="Images/candy.png" width="300px" height="200px" alt="">
+        </div>
+    </div>
+    <form action="processForm.php" method="POST">
+        <section id="signup_section">
+            <h2> Sign Me Up! <br>
+
+                <label for="name"id="name">Name:</label>
+                <input type="name" name="name" placeholder="Enter name">
+
+                <label for="email" id="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <button> Sign me up
+                </button>
+
+            </h2>
+        </section>
+
+        <h4>
+            <section id="financials_section">Financials</section> <br> Lorem ipsum dolor sit amet, consectetur
+            adipisicing
+            elit. Quibusdam accusamus, error enim quam
+            numquam repudiandae, ratione explicabo hic quis quasi corporis fuga unde.
+        </h4>
+
+        <h3>
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>1st Quarter Profits</th>
+                        <th>2nd Quarter Profits</th>
+                        <th>3rd Quarter Profits</th>
+                        <th>4th Quarter Profits</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>2012</td>
+                        <td>345</td>
+                        <td>450</td>
+                        <td>780</td>
+                        <td>230</td>
+                        <td>320</td>
+
+                    </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td>7900</td>
+                        <td>8900</td>
+                        <td>4900</td>
+                        <td>8900</td>
+                        <td>4900</td>
+
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>7900</td>
+                        <td>8900</td>
+                        <td>4900</td>
+                        <td>8900</td>
+                        <td>4900</td>
+
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>7900</td>
+                        <td>8900</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>3455</td>
+
+                    </tr>
+
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td>total</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>456554</td>
+
+                    </tr>
+                </tfoot>
+
+            </table>
+        </h3>
+
+
+
+        <h4>
+            <section id="aboutus_section">About Us</section> <br> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Quibusdam accusamus, error enim quam
+            numquam repudiandae, ratione explicabo hic quis quasi corporis fuga unde! Officia velit inventore doloribus
+            sit,
+            porro rem exercitationem corporis minima soluta, quaerat cum doloremque culpa dolores dignissimos ut.
+            Consequatur, eligendi! Excepturi perspiciatis quidem illum atque facere impedit ipsam, ratione harum
+            blanditiis
+            veniam voluptates, recusandae quia minus quaerat deleniti asperiores quos nesciunt, sint facilis animi
+            cupiditate amet autem. Excepturi fuga alias quas sed eveniet itaque praesentium commod Lorem, ipsum dolor
+            sit amet consectetur adipisicing elit. Magnam iusto debitis ducimus, recusandae porro non officia corrupti
+            quas natus sunt eaque, dolor minus omnis voluptatum repudiandae quasi ullam id perferendis beatae. Quis quae
+            dolorem numquam, minus voluptatibus vero sint quas quam voluptate est nobis distinctio fugiat eum, maxime
+            ipsa sit, autem aliquid reiciendis sapiente omnis? Officiis aperiam voluptates modi est ea molestiae
+            aspernatur, soluta esse, ratione voluptate, et ipsum vero ad asperiores tempora impedit ipsa delectus odio
+            alias eligendi deserunt? Officiis eveniet reiciendis id numquam temporibus velit doloribus delectus expedita
+            consequatur adipisci, consequuntur ipsa pariatur a assumenda aut, ipsam laudantium fugiat aliquid similique
+            officia amet cupiditate cumque! Et nesciunt molestiae facilis quis omnis sint fugit hic asperiores illum
+            non, itaque voluptate, consequuntur suscipit aliquid recusandae amet alias. Quidem dolorum quaerat facere
+            doloribus dolores voluptate fugit, quisquam enim nisi unde praesentium sunt eum. Ducimus ullam quae quos
+            velit ipsam. Dolore voluptate repellendus quae vitae iusto eaque necessitatibus velit eum doloremque. Itaque
+            minima optio vitae assumenda magni aliquid odio magnam non tenetur veritatis iure architecto quae iusto
+            commodi quaerat, aspernatur natus ex fugiat! Voluptatem velit assumenda modi voluptatum, qui fugit est quae
+            repellendus ad sed nihil praesentium vero consequuntur, nam, numquam excepturi itaque exercitationem nostrum
+            corporis labore totam explicabo! Expedita deleniti dignissimos officiis sint architecto iste doloremque,
+            similique ipsa, ipsam distinctio placeat velit est possimus ut id impedit odit porro ea rem repellendus aut
+            laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure in, qui enim perferendis,
+            dicta tempore itaque aliquam asperiores sed obcaecati ipsa beatae rerum nisi eius doloribus voluptatum
+            explicabo molestias non quaerat ullam. Asperiores cupiditate voluptatem veniam nihil et explicabo ipsam.
+            Minima veritatis illum deserunt reiciendis odit alias qui commodi!<br><br>
+
+        </h4>
+
+
+        <footer>&copy; PCS 2019 </footer>
+
+</body>
+
+</html>
