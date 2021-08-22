@@ -1,4 +1,4 @@
-'use strict';
+
 
 // 1 - Write a dayOfweek module / Immediately Invoked Function Expression
 //  that is similar to the monthName module we wrote in class.
@@ -13,16 +13,29 @@
 
 
   const mu = (function () {
+  'use strict';
+  
     const dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday",
      "Thursday", "Friday", "Saturday"];
   
     function getDay(index) {
         return dayOfWeek[index-1];
       }
+
       
-      function getIndex (dayOfWeek) {
-     return dayOfWeek.findIndex(n => n.toLowerCase() === dayOfWeek.toLowerCase()) + 1;
-      }
+      function getIndex (day) {
+     //return dayOfWeek.findIndex(day => dow === day.toLowerCase()) + 1;
+     for(let i = 0; i < dayOfWeek.length; i++) {
+       if(dayOfWeek[i] === day){
+     return i+1;
+    }}
+  
+    // return days.findIndex(function (dayOfWeek) {
+    //   return dayOfWeek.toLowerCase();
+    // }) + 1;
+      
+  
+    }
 
    
  return {
@@ -31,7 +44,7 @@
     };
   }());
   
-  console.log('mu.getIndex("january")', mu.getIndex('january'));
+  console.log(mu.getIndex("Monday"));
   console.log('mu.getDay(1))', mu.getDay(1));
   
 
@@ -48,23 +61,45 @@
 
 
 
-const intrestRateCalculator = (function(){
- let interestRate=0;
- let years =0;
- function setRate(rate){
-     interestRate=rate;
- }
- function setYears(yrs){
-     years=yrs;
+ window.intrestRateCalculator = (function calculator(){
+  'use strict';
 
- }
+  let interestRate=0;
+  let years =0;
+ 
+//   function setRate(rate){
+//      interestRate=rate;
+    
+//  }
+//  function setYears(yrs){
+//      years=yrs;
+    
+
+//  }
  function calculate(amount){
-     for(let i=0; i)}
+  let p=amount;
+     for(let i=0; i<years.length; i++){
+    p+=p*interestRate;
+  return p-amount;}}
 
     return{
-        setRate: setRate,
-        setYears: setYears,
+        setRate: function setRate(rate){
+          interestRate=rate;
+          return this;
+        },
+        setYears:function setYears(yrs){
+          years=yrs;
+          return this;
+        },
+       
         calculate:calculate
-    }
+    };
 }());
+
+
+// window.intrestRateCalculator.setRate(0.09);
+// window.intrestRateCalculator.setYears(10);
+// console.log(window.intrestRateCalculator.calculate(100));
+
+console.log(window.intrestRateCalculator.setYears(10).setYears(0.09).calculate(100));
 
