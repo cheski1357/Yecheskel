@@ -1,15 +1,16 @@
 'use strict';
 
-const myVar = document.getElementById('myTesting');
-let theIntravel = null;
+const theBox = document.getElementById('myTesting');
+const myTable = document.getElementById('theTable');
+let theInterval = null;
 let i = 0;
 const colorArray = ['red', 'purple', 'green'];
-const myTable = document.getElementById('theTable');
+
 
 function myIntreval() {
-  theIntravel = setInterval((function () {
+  theInterval = setInterval((function () {
       let theColor = colorArray[i++];
-    myVar.style.backgroundColor = theColor;
+    theBox.style.backgroundColor = theColor;
 
     if (i >= colorArray.length) {
       i = 0;
@@ -17,11 +18,16 @@ function myIntreval() {
  const newRow = myTable.insertRow();
  const cellOne = newRow.insertCell(0);
  const cellTwo = newRow.insertCell(1);
- const cellThree = newRow.insertCell(2);
+ 
 
  newRow.addEventListener('click', function () {
+clearInterval(theInterval);
+theBox.style.backgroundColor = theColor;
 
-  console.log(theColor);
+
+
+
+
 
 
 });
@@ -48,7 +54,8 @@ document.getElementById('theButton').innerText = 'start';
 
 document.getElementById('theButton').addEventListener('click', function () {
 
-  if (theIntravel === null) {
+  if (theInterval
+ === null) {
 
     document.getElementById('theButton').innerText = 'stop';
     myIntreval()
@@ -56,8 +63,10 @@ document.getElementById('theButton').addEventListener('click', function () {
 
   else {
     document.getElementById('theButton').innerText = 'start';
-    clearInterval(theIntravel)
-    theIntravel = null;
+    clearInterval(theInterval
+  )
+    theInterval
+ = null;
   }
 
 

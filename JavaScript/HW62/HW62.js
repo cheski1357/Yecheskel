@@ -1,5 +1,3 @@
-
-
 // 1 - Write a dayOfweek module / Immediately Invoked Function Expression
 //  that is similar to the monthName module we wrote in class.
 //   The module should return an object that has 2 functions:
@@ -9,44 +7,42 @@
 //     that would actually probably be more useful.)
 // b)getDayNumber that takes a day name and returns the day number
 
-
-
-
-  const mu = (function () {
+const mu = (function () {
   'use strict';
-  
-    const dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday",
-     "Thursday", "Friday", "Saturday"];
-  
-    function getDay(index) {
-        return dayOfWeek[index-1];
-      }
 
-      
-      function getIndex (day) {
-     //return dayOfWeek.findIndex(day => dow === day.toLowerCase()) + 1;
-     for(let i = 0; i < dayOfWeek.length; i++) {
-       if(dayOfWeek[i] === day){
-     return i+1;
-    }}
-  
+  const dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday",
+    "Thursday", "Friday", "Saturday"];
+
+  function getDay(index) {
+    return dayOfWeek[index - 1];
+  }
+
+
+  function getIndex(day) {
+    //return dayOfWeek.findIndex(day => dow === day.toLowerCase()) + 1;
+    for (let i = 0; i < dayOfWeek.length; i++) {
+      if (dayOfWeek[i] === day) {
+        return i + 1;
+      }
+    }
+
     // return days.findIndex(function (dayOfWeek) {
     //   return dayOfWeek.toLowerCase();
     // }) + 1;
-      
-  
-    }
 
-   
- return {
-      getDay: getDay,
-      getIndex: getIndex
-    };
-  }());
-  
-  console.log(mu.getIndex("Monday"));
-  console.log('mu.getDay(1))', mu.getDay(1));
-  
+
+  }
+
+
+  return {
+    getDay: getDay,
+    getIndex: getIndex
+  };
+}());
+
+console.log(mu.getIndex("Monday"));
+console.log('mu.getDay(1))', mu.getDay(1));
+
 
 
 
@@ -61,39 +57,33 @@
 
 
 
- window.intrestRateCalculator = (function calculator(){
+const intrestRateCalculator = (function calculator() {
   'use strict';
 
-  let interestRate=0;
-  let years =0;
- 
-//   function setRate(rate){
-//      interestRate=rate;
-    
-//  }
-//  function setYears(yrs){
-//      years=yrs;
-    
+  let interestRate;
+  let years;
 
-//  }
- function calculate(amount){
-  let p=amount;
-     for(let i=0; i<years.length; i++){
-    p+=p*interestRate;
-  return p-amount;}}
 
-    return{
-        setRate: function setRate(rate){
-          interestRate=rate;
-          return this;
-        },
-        setYears:function setYears(yrs){
-          years=yrs;
-          return this;
-        },
-       
-        calculate:calculate
-    };
+  function calculate(amount) {
+    let p = amount;
+    for (let i = 0; i < years; i++) {
+      p += p * interestRate;
+      return p - amount;
+    }
+  }
+
+  return {
+    setRate: function setRate(rate) {
+      interestRate = rate;
+      return this;
+    },
+    setYears: function setYears(yrs) {
+      years = yrs;
+      return this;
+    },
+
+    calculate: calculate
+  };
 }());
 
 
@@ -101,5 +91,4 @@
 // window.intrestRateCalculator.setYears(10);
 // console.log(window.intrestRateCalculator.calculate(100));
 
-console.log(window.intrestRateCalculator.setYears(10).setYears(0.09).calculate(100));
-
+console.log(intrestRateCalculator.setYears(10).setRate(0.09).calculate(200));
