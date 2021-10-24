@@ -1,0 +1,22 @@
+[
+    {
+      "name": "bread",
+      "flour": "3 cups",
+      "water":"1.5 cups",
+      "salt": ".25 tsp"
+    },
+    {
+      "name": "cookies",
+      "flour": "2 cups",
+      "sugar": "1 cup",
+      "vanila": "1 tsp"
+    }
+    {
+      "name": "cake",
+      "flour":"3 cups",
+      "sugar":"1 cup",
+      "salt":".25 tsp",
+      "vanila":"1 tsp"
+
+    }
+  ]
