@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <style>
+        #sidebar {
+            float: left;
+            height:500px;
+            
 
-    <div id= "videoBox">Music Songs</div>
+        }
+
+       #sidebar li {
+            border: solid black 1px;
+            margin: 13px;
+            height: 50%
+            
+        }
+        img{
+            height: 100px;
+        }
+
+        #video {
+            padding: 0px;
+        }
+        #sidebar ul{
+             list-style-type: none;
+            
+             
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <ul></ul>
+    </div>
+    <video id="video" width="320" height="240" controls autoplay></video>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="HW73.js"></script>
 </body>
+
 </html>

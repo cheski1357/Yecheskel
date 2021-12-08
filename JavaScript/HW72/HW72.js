@@ -53,3 +53,8 @@
 //   loadRecipes();
 // }());
 
+fetch('recipe.json')
+    .then(request => request.json())
+    .then(recipe => {
+        console.log(recipe)
+    })

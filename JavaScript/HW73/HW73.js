@@ -1,25 +1,38 @@
+(async function () {
+    'use strict';
 
-async function videoFunction() {
-
-    const response = await fetch('songs.json');
-    const songs = await response.json();
-   const theVideoBox = document.getElementById('videoBox');
-
-
-
-    songs.forEach(element => {
-
-        const theVideo = document.createElement('video');
-        theVideo.src = element.url;
-        
-       
-        theVideoBox.appendChild(theVideo)
-
-        theVideo.addEventListener('click', () => {
-            theVideo.play();
-        })
+    const watchVideo = $('#video');
+    const videoList = $('#sidebar ul');
     
-    });
+    async function loadVideos() {
+        const request = await fetch('videos.json')
+        return await request.json();
+    }
 
-}
-videoFunction();
+    function populateVideoList(videos) {
+
+        videos.forEach(element => {
+            const theLi = $(`<li>
+            <span>${element.title}</span>
+            <img src="${element.img}"></li>`)
+                .appendTo(videoList)
+                .click(function () {
+                     
+
+                    watchVideo.attr('src', videos.url);
+
+                });
+
+
+
+
+        });
+    }
+
+
+    const videos = await loadVideos();
+    populateVideoList(videos);
+
+
+
+}())
