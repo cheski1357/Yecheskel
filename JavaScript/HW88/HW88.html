@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+
+    const helloWorld = <h1>Hello World</h1>;
+
+    const menu ={
+        appetizer: 'eggplant',
+        main:'panini'
+    }
+
+    function getTaste(food){
+        if(food){
+            return <h1> that was delicious!</h1>
+        }
+        return <h1> tasteless! </h1>
+    }
+
+      ReactDOM.render(
+        getTaste(menu),
+        document.getElementById('root')
+      );
+
+    </script>
+    
+  </body>
+</html>
