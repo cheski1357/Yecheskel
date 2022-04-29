@@ -1,5 +1,25 @@
 (async function () {
   'use strict';
+  const letsSort = function (arr) {
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] > arr[i + 1]) {
+            let temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+        }
+    }
+  return arr;
+}
+
+const letsSort2 = function (arr) {
+    for (let i = 0; i < arr.length; i++) {
+       letsSort(arr)
+}
+
+    return arr;
+}
 
   const currencyASelect = $('#currencyA');
   const currencyBSelect = $('#currencyB');
@@ -16,26 +36,45 @@
   const request = await fetch('countries.json')
   let countries = await request.json();
 
-
   countries = countries.results;
-
   countries = Object.entries(countries);
+  countries = countries.map(e=>e[1]);
 
-  console.log(countries);
+  
+ console.log(countries);
+
+ countries.sort(function(a, b){
+  if(a.name < b.name) { return -1; }
+  if(a.name > b.name) { return 1; }
+  return 0;
+})
+  
 
   countries.forEach(element => {
-    const theCurrency = element[1].currencyId;
-    const theCountry = element[1].name;
-    const currencySymbol = element[1].currencySymbol
-    const currencyName = element[1].currencyName
+
+  
+    
+    const theCurrency = element.currencyId;
+    const theCountry = element.name;
+    const currencySymbol = element.currencySymbol
+    const currencyName = element.currencyName
 
 
     currencyASelect.append(`<option value = ${theCurrency} >${theCountry}, ${currencyName}, ${currencySymbol}, ${theCurrency}</option>`)
     currencyBSelect.append(`<option value = ${theCurrency} >${theCountry}, ${currencyName}, ${currencySymbol}, ${theCurrency}</option>`)
     currencyCSelect.append(`<option value = ${theCurrency} >${theCountry}, ${theCurrency}</option>`)
     currencyDSelect.append(`<option value = ${theCurrency} >${theCountry}, ${theCurrency}</option>`)
+ 
+    
 
+  
   })
+
+  
+  
+ 
+
+
 
 
   theButton.on('click', async () => {
