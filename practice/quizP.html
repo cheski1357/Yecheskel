@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #boxResult {
+            height: 130px;
+            width: 360px;
+        
+            padding-left: 900px;
+            text-align: center;
+            font-size: 5.5em;
+            background-color: white;
+        }
+
+        #cAR,
+        #cBR {
+            height: 100px;
+            width: 200px;
+            background-color: purple;
+            border: solid black 1px;
+            float: left;
+            font-size: 5.5em;
+            padding-left: 22px;
+        }
+
+        #cBR {
+            margin-left: 200px;
+        }
+
+        #tCR {
+            margin-top: -10%;
+            padding-left: 6em;
+
+        }
+
+        #equals {
+            font-size: 5em;
+        }
+
+       
+
+        #one,
+        #two {
+            height: 20px;
+            width: 100px;
+            border: black solid 1px;
+            background-color: lightgrey;
+
+            float: left;
+
+        }
+        #userMoney{
+            text-align: center;
+        }
+      
+    </style>
+</head>
+
+<body>
+
+    <select id="currencyA">
+        <option hidden>choose a country</option>
+    </select>
+    <button id="theButton"> exchange rate </button>
+    <select id="currencyB">
+        <option hidden>choose a country</option>
+    </select></div>
+    <div id="boxResult"></div>
+    <div id="tCR">
+        <div id="cAR"></div>
+        <div id="cBR"></div>
+        <div id="equals"> =></div>
+    </div>
+    <br> <br>
+  <div id="userMoney"><div> <input type="text" placeholder="enter an amount" id="currencyInput">
+        <button id="theButton2">exchange</button>
+        <output id="currencyOutput"></output>
+    </div> <select id="currencyC">
+        <option hidden>choose a currency</option>
+        
+    </select>
+    <select id="currencyD"><option hidden>choose a currency</option></select></div>  
+
+
+   <script src="jq.js"></script>
+   <script src="quizP.js"></script>
+
+</body>
+
+</html>
